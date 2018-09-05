@@ -1,4 +1,34 @@
 
+
+## Encrypt an existing  Virtual Machine in Azure
+This module implements Azure Disk Encryption feature to encrypt currently running VM's.  ADE leverages the industry standard BitLocker feature of Windows and DM-Crypt feature of lihnux to provide volume encryption for the OS and data disks.
+
+## prerequisites
+All the prerequsites can be found at the [Azure Disk Encryption prerequisites](https://docs.microsoft.com/en-us/azure/security/azure-security-disk-encryption-prerequisites)
+**gSetting the [Advanced access policies](https://docs.microsoft.com/en-us/azure/security/azure-security-disk-encryption-prerequisites#bkmk_KVper) for the Key Vault is required for this module to work.** 
+
+## Usage
+
+
+```hcl
+
+module "diskencrypt" {
+  source               = "Azure/diskencrypt/azurerm"
+  resource_group_name  = "myapp"
+  location             = "westus"
+  vm_name              = "ubuntu1"
+  key_vault_name       = "testkeyvault123"
+  encryption_algorithm = "RSA-OAEP"
+  encryption_key_url   = "https://testkeyVault123.vault.azure.net:443/keys/ContosoFirstKey/9465333262aa49468c7f0dad5a167ee8"
+  
+  tags = {
+    environment = "dev"
+    costcenter  = "it"
+  }
+}
+
+```
+
 # Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
