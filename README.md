@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/Azure/terraform-azurerm-diskencrypt.svg?branch=master)](https://travis-ci.org/Azure/terraform-azurerm-diskencrypt)
 
 ## Encrypt an existing  Virtual Machine in Azure
-This module implements Azure Disk Encryption feature to encrypt currently running VM's.  ADE leverages the industry standard BitLocker feature of Windows and DM-Crypt feature of lihnux to provide volume encryption for the OS and data disks.
+This module implements Azure Disk Encryption feature to encrypt currently running VM's.  ADE leverages the industry standard BitLocker feature of Windows and DM-Crypt feature of linux to provide volume encryption for the OS and data disks.
 
 ## prerequisites
 All the prerequsites can be found at the [Azure Disk Encryption prerequisites](https://docs.microsoft.com/en-us/azure/security/azure-security-disk-encryption-prerequisites)
