@@ -7,7 +7,8 @@ This module implements Azure Disk Encryption feature to encrypt currently runnin
 
 ## prerequisites
 All the prerequsites can be found at the [Azure Disk Encryption prerequisites](https://docs.microsoft.com/en-us/azure/security/azure-security-disk-encryption-prerequisites)
-**gSetting the [Advanced access policies](https://docs.microsoft.com/en-us/azure/security/azure-security-disk-encryption-prerequisites#bkmk_KVper) for the Key Vault is required for this module to work.** 
+
+**Setting the [Advanced access policies](https://docs.microsoft.com/en-us/azure/security/azure-security-disk-encryption-prerequisites#bkmk_KVper) for the Key Vault is required for this module to work.** 
 
 ## Usage
 
