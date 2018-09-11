@@ -1,4 +1,4 @@
-# terraform-azurerm-network
+# terraform-azurerm-diskencrypt
 
 [![Build Status](https://travis-ci.org/Azure/terraform-azurerm-diskencrypt.svg?branch=master)](https://travis-ci.org/Azure/terraform-azurerm-diskencrypt)
 
