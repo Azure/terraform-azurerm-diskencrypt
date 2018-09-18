@@ -1,6 +1,6 @@
 variable vm_name {
-     description = "Name of the VM to encrypt"
-     default = "ubuntu1"
+  description = "Name of the VM to encrypt"
+  default     = "ubuntu1"
 }
 
 variable "resource_group_name" {
@@ -13,28 +13,35 @@ variable "location" {
   default     = "South Central US"
 }
 
-
 variable key_vault_name {
-    description = "Name of the keyVault"
-    default = "testkeyVault123"
+  description = "Name of the keyVault"
+  default     = "testkeyVault123"
 }
 
 variable encryption_key_url {
-    description = "URL to encrypt Key"
-    default = ""
+  description = "URL to encrypt Key"
+  default     = ""
 }
 
 variable encryption_algorithm {
-    description = " Algo for encryption"
-    default = "RSA-OAEP"
+  description = " Algo for encryption"
+  default     = "RSA-OAEP"
 }
 
 variable "volume_type" {
-    default = "All"
+  default = "All"
 }
 
 variable "encrypt_operation" {
-    default = "EnableEncryption"
-
+  default = "EnableEncryption"
 }
 
+variable "tags" {
+  description = "The tags to associate with your network and subnets."
+  type        = "map"
+
+  default = {
+    tag1 = ""
+    tag2 = ""
+  }
+}
