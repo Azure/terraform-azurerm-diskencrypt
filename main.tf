@@ -9,7 +9,7 @@ resource "azurerm_resource_group" "test" {
 }
 
 data "azurerm_key_vault" "keyvault" {
-  name                = "${var.keyVaultName}"
+  name                = "${var.key_vault_name}"
   resource_group_name = "${var.resource_group_name}"
 }
 
@@ -29,7 +29,7 @@ resource "azurerm_virtual_machine_extension" "vmextension" {
         "EncryptionOperation": "${var.encrypt_operation}",
         "KeyVaultURL": "${data.azurerm_key_vault.keyvault.vault_uri}",
         "KeyVaultResourceId": "${data.azurerm_key_vault.keyvault.id}",					
-        "KeyEncryptionKeyURL": "${var.keyEncryptionKeyURL}",
+        "KeyEncryptionKeyURL": "${var.encryption_key_url}",
         "KekVaultResourceId": "${data.azurerm_key_vault.keyvault.id}",					
         "KeyEncryptionAlgorithm": "${var.encryption_algorithm}",
         "VolumeType": "${var.volume_type}"
