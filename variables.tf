@@ -37,7 +37,7 @@ variable "encrypt_operation" {
 }
 
 variable "tags" {
-  description = "The tags to associate with your network and subnets."
+  description = "The tags to associate with your resources"
   type        = "map"
 
   default = {
