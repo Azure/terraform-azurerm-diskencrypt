@@ -5,7 +5,7 @@ variable vm_name {
 
 variable "vm_os_type" {
   description = "Type of OS. Allowed values are Windows and Linux. Defaults to Linux"
-  default = "linux"
+  default     = "linux"
 }
 
 variable "resource_group_name" {
@@ -43,10 +43,11 @@ variable "encrypt_operation" {
 
 variable "type_handler_version" {
   description = "Type handler version of the VM extension to use. Defaults to 2.2 on Windows and 1.1 on Linux"
-  default = ""
+  default     = ""
 }
+
 variable "tags" {
-  description = "The tags to associate with your network and subnets"
+  description = "The tags to associate with your resources"
   type        = "map"
 
   default = {

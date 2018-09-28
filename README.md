@@ -10,6 +10,8 @@ All the prerequsites can be found at the [Azure Disk Encryption prerequisites](h
 
 **Setting the [Advanced access policies](https://docs.microsoft.com/en-us/azure/security/azure-security-disk-encryption-prerequisites#bkmk_KVper) for the Key Vault is required for this module to work.** 
 
+** [Important Note](https://docs.microsoft.com/en-us/azure/security/azure-security-disk-encryption-linux) We need to enable disk backup to encrypt managed data disks. **
+
 ## Usage
 
 

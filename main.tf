@@ -46,7 +46,7 @@ resource "azurerm_virtual_machine_extension" "vmextensionlinux" {
   virtual_machine_name       = "${var.vm_name}"
   publisher                  = "Microsoft.Azure.Security"
   type                       = "AzureDiskEncryptionForLinux"
-  type_handler_version       = "${var.type_handler_version == "" ? "1.1" : var.type_handler_version}" 
+  type_handler_version       = "${var.type_handler_version == "" ? "1.1" : var.type_handler_version}"
   auto_upgrade_minor_version = true
 
   settings = <<SETTINGS
