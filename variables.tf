@@ -3,8 +3,13 @@ variable vm_name {
   default     = "ubuntu1"
 }
 
+variable "vm_os_type" {
+  description = "Type of OS. Allowed values are Windows and Linux. Defaults to Linux"
+  default = "linux"
+}
+
 variable "resource_group_name" {
-  description = "Default resource group name that the network will be created in."
+  description = "Default resource group name that the network will be created in"
   default     = "vjresourcegroup"
 }
 
@@ -36,8 +41,12 @@ variable "encrypt_operation" {
   default = "EnableEncryption"
 }
 
+variable "type_handler_version" {
+  description = "Type handler version of the VM extension to use. Defaults to 2.2 on Windows and 1.1 on Linux"
+  default = ""
+}
 variable "tags" {
-  description = "The tags to associate with your network and subnets."
+  description = "The tags to associate with your network and subnets"
   type        = "map"
 
   default = {
